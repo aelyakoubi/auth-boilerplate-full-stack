@@ -1,6 +1,6 @@
 import express from 'express';
 import cors from 'cors';
-import auth from './authMiddleware'; // Note the .js extension
+import auth from './src/authMiddleware.js';
 import 'dotenv/config';
 
 const app = express();
