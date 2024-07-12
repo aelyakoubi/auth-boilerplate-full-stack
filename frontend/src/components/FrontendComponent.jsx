@@ -11,7 +11,7 @@ const FrontendComponent = () => {
     const fetchData = async () => {
       try {
         const token = await getAccessTokenSilently();
-        const response = await fetch('http://localhost:3001', { // Change this to your API URL
+        const response = await fetch('http://localhost:8080', { // Change this to your API URL
           headers: {
             Authorization: `Bearer ${token}`, 
           },

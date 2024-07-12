@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "babel-node ./node_modules/webpack/bin/webpack.js serve --config webpack.config.cjs --mode development",
+    "build": "webpack --config webpack.config.js --mode production",
     "test": "echo \"Error: no test specified\" && exit 1",
     "eject": "react-scripts eject"
   },
@@ -14,9 +14,12 @@
   "description": "",
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "web-vitals": "^4.2.1"
   },
   "browserslist": {
     "production": [
@@ -29,5 +32,12 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.8",
+    "@babel/node": "^7.24.8",
+    "env-cmd": "^10.1.0",
+    "webpack": "^5.93.0",
+    "webpack-cli": "^5.1.4"
   }
 }
